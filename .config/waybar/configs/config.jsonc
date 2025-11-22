@@ -1,0 +1,50 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+     "hyprland/workspaces", 
+     "wlr/taskbar", 
+     "hyprland/window"
+  ],
+
+  "modules-center": [
+     "clock"
+  ],
+
+  "modules-right": [
+    "idle_inhibitor",
+    "wireplumber",
+    "cpu", 
+    "memory", 
+    "tray"
+  ],
+
+    "wireplumber": {
+        "format": "VOL: {volume}% {icon}",
+        "scroll-step": 1,
+        "on-click": "pwvucontrol"
+    },
+
+  "clock": {
+    "format": "{:%a %b %d, %H:%M}"
+  },
+
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+
+  "wlr/taskbar": {
+    "on-click": "activate"
+  },
+
+  "idle_inhibitor":{
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  }
+}
+
+
