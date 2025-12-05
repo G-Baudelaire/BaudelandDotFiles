@@ -1,6 +1,8 @@
 @define-color background #2C2A24;
-@define-color border #D08B57;
+@define-color border #A0907A;
 @define-color text #DDD5C4;
+@define-color focused_background #3A372F;
+@define-color focused_text #BFAA80;
 
 * {
   font-family: JetbrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -12,23 +14,33 @@
   background: transparent;
 }
 
+
 .modules-left,
 .modules-center,
 .modules-right {
+  min-height: 30px;
   margin: 5px 5px;
-  padding: 0 15px;
   border: 2px solid @border;
   border-radius: 5px;
   background: @background;
 }
 
+#workspaces button {
+  min-width: 0;
+  padding: 0 8px 0 8px;
+  background-color: transparent;
+  border-radius: 0;
+}
 
-#workspaces,
+#workspaces button.active {
+  color: @focused_text;
+  background-color: @focused_background;
+}
+
 #submap,
 #window,
 #clock,
 #idle_inhibitor,
-#cava,
 #pulseaudio,
 #network,
 #backlight,
@@ -57,7 +69,8 @@
   color: red;
 }
 
-#window.empty {
-  padding: 0 0;
-  background: red;
+window#waybar.empty #window {
+  padding: 0;
+  margin: 0;
+  min-width: 0;
 }

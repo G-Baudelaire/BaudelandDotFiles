@@ -2,10 +2,10 @@
   "spacing": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/submap"
+    "hyprland/submap",
+    "hyprland/window"
   ],
   "modules-center": [
-    "hyprland/window",
     "clock"
   ],
   "modules-right": [
@@ -21,17 +21,17 @@
     "custom/power"
   ],
   "hyprland/workspaces": {
-    "format": "{icon}: {windows}",
-    "format-window-separator": "",
+    "format": "{icon}{windows}",
+    "format-window-separator": " |",
     "workspace-taskbar": {
       "enable": true,
-      "update-active-window": true,
-      "icon-size": 18,
+      "format": " {icon}",
       "on-click-window": "${SCRIPTS}/focus-window.sh {address} {button}"
     }
   },
   "hyprland/window": {
-    "format": "{initialTitle}"
+    "format": "{class}",
+    "seperate-outputs": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -41,17 +41,12 @@
     }
   },
   "tray": {
-    // "icon-size": 21,
-    "spacing": 5,
-    // "icons": {
-    //   "blueman": "bluetooth",
-    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-    // }
+    "spacing": 5
   },
   "clock": {
-    // "timezone": "America/New_York",
+    "format": "{:%F %R}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "Day of the Year: {:%j}"
   },
   "cpu": {
     "format": " {usage}%",
