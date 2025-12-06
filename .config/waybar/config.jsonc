@@ -10,13 +10,13 @@
   ],
   "modules-right": [
     "idle_inhibitor",
-    "cava",
+    "hyprsunset",
     "pulseaudio",
-    "network",
     "backlight",
     "cpu",
     "memory",
     "battery",
+    "network",
     "tray",
     "custom/power"
   ],
@@ -31,7 +31,7 @@
   },
   "hyprland/window": {
     "format": "{class}",
-    "seperate-outputs": true
+    "separate-outputs": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -90,11 +90,7 @@
       ""
     ]
   },
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": " {signalStrength}%",
     "format-ethernet": "",
     "tooltip-format": "{ifname} via {gwaddr}",
